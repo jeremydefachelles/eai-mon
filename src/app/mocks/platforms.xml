@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<eai_platforms>
+
+
+	<platform name="ALIANS_DEV">
+		<error_tracking_db name="ERROR_TRACKING_DB_ANTARES">
+			<server>dun-dev-bpms02</server>
+			<user>ERROR_TRACKING_DB_ANTARES_admin</user>
+			<pass>sqladmindev</pass>
+		</error_tracking_db>
+		<wm_monitor IS="" />
+	</platform>
+
+	<platform name="ESB_ACC">
+		<error_tracking_db name="Error_Tracking_DB">
+			<server>ARMDBSDUN002</server>
+			<user>Error_Tracking_DB_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="" />
+	</platform>
+	<platform name="ESB_OPE">
+		<error_tracking_db name="Error_Tracking_DB">
+			<server>DUN-APP-GFSQL08</server>
+			<user>Error_Tracking_DB_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="" />
+	</platform>
+
+	<platform name="DOMCOM_ACC">
+		<error_tracking_db name="Error_Tracking_DB_domcom">
+			<server>dun-int-wmsql01</server>
+			<user>Error_Tracking_DB_domcom_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="intwbm03:5420" />
+	</platform>
+	<platform name="DOMCOM_OPE">
+		<error_tracking_db name="Error_Tracking_DB_domcom">
+			<server>dun-app-gfsql08</server>
+			<user>Error_Tracking_DB_domcom_admin</user>
+			<pass>sqladminprod</pass>
+		</error_tracking_db>
+		<wm_monitor IS="appgfwbm04:5420" />
+	</platform>
+
+	<platform name="Antares_ACC">
+		<error_tracking_db name="ERROR_TRACKING_DB_ANTARES">
+			<server>dun-int-wmsql01</server>
+			<user>ERROR_TRACKING_DB_ANTARES_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="" />
+	</platform>
+	<platform name="Antares_OPE">
+		<error_tracking_db name="ERROR_TRACKING_DB_ANTARES">
+			<server>dun-app-gfsql08.armony.net</server>
+			<user>ERROR_TRACKING_DB_ANTARES_admin</user>
+			<pass>sqladminprod</pass>
+		</error_tracking_db>
+		<wm_monitor IS="" />
+	</platform>
+
+	<platform name="DomComTBOBdNorth_DEV">
+		<error_tracking_db name="ERROR_TRACKING_DB_ANTARES">
+			<server>dun-dev-bpms02</server>
+			<user>ERROR_TRACKING_DB_TBO_admin</user>
+			<pass>sqladmindev</pass>
+		</error_tracking_db>
+		<wm_monitor IS="" />
+	</platform>
+
+	<platform name="TBO_ACC">
+		<error_tracking_db name="ERROR_TRACKING_DB_TBO">
+			<server>dun-int-wmsql01</server>
+			<user>ERROR_TRACKING_DB_TBO_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="http://dun-int-gfbpm02:7070/" />
+	</platform>
+	<platform name="TBO_OPE">
+		<error_tracking_db name="ERROR_TRACKING_DB_TBO">
+			<server>dun-app-gfsql08.armony.net</server>
+			<user>ERROR_TRACKING_DB_tbo_admin</user>
+			<pass>sqladminprod</pass>
+		</error_tracking_db>
+		<wm_monitor IS="appwbm02:5400" />
+	</platform>
+
+
+	<platform name="A2C_DEV">
+		<error_tracking_db name="Error_Tracking_DB">
+			<server>dun-dev-bpms02</server>
+			<user>Error_Tracking_DB_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="dun-dev-bpms01:8400/" />
+	</platform>
+	<platform name="A2C_ACC">
+		<error_tracking_db name="Error_Tracking_DB_domcom">
+			<server>dun-int-wmsql01</server>
+			<user>Error_Tracking_DB_domcom_admin</user>
+			<pass>sqladmin</pass>
+		</error_tracking_db>
+		<wm_monitor IS="dun-int-gfbpm03:6800" />
+	</platform>
+	<platform name="A2C_OPE">
+		<error_tracking_db name="Error_Tracking_DB_domcom">
+			<server>dun-app-gfsql08</server>
+			<user>Error_Tracking_DB_domcom_admin</user>
+			<pass>sqladminprod</pass>
+		</error_tracking_db>
+		<wm_monitor IS="dun-app-gfbpm03:6800" />
+	</platform>
+
+</eai_platforms>

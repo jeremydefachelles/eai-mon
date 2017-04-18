@@ -1,0 +1,41 @@
+<h2 class="mdl-card__title-text">
+  Search panel</h2>
+
+<md-tab-group>
+  <md-tab label="Funtional" class="searchTabs">
+    <p>
+      <md-input-container>
+        <input mdInput placeholder="Functional ID" [(ngModel)]="search.functionalId" (keyup)="updateParameters()" />
+      </md-input-container>
+      <md-input-container>
+        <input mdInput placeholder="Correlation ID" [(ngModel)]="search.correlationID" (keyup)="updateParameters()" />
+      </md-input-container>
+      <md-card>
+        <md-select placeholder="Status" [(ngModel)]="search.mstatus" (change)="updateParameters()">
+          <md-option [(value)]="ALL">All</md-option>
+          <md-option [(value)]="Fail">Fail</md-option>
+          <md-option [(value)]="Success">Success</md-option>
+        </md-select>
+      </md-card>
+  </md-tab>
+  <md-tab label="Time settings" class="searchTabs">
+    <p>
+      <md-input-container><input type="date" placeholder="begin date" mdInput name="beginDate" id="beginDate" [(ngModel)]="search.beginDate"  (change)="updateParameters()"
+        /></md-input-container>
+      <md-input-container><input type="time" placeholder="begin hours" mdInput name="beginHours" id="beginHours" [(ngModel)]="search.beginHours"  (change)="updateParameters()"
+        /></md-input-container>
+    </p>
+    <p>
+      <md-input-container><input type="date" placeholder="end date" mdInput name="endDate" id="endDate" [(ngModel)]="search.endDate" (change)="updateParameters()"/></md-input-container>
+      <md-input-container><input type="time" placeholder="end hours" mdInput name="endHours" id="endHours" [(ngModel)]="search.endHours" (change)="updateParameters()"/></md-input-container>
+    </p>
+  </md-tab>
+  <md-tab label="Advanced" class="searchTabs">
+    <p>
+      <md-input-container> <input mdInput placeholder="Number of Elements" [(ngModel)]="search.nbElements" (change)="updateParameters()" name="nbElements" id="nbElements" />
+      </md-input-container>
+    </p>
+  </md-tab>
+</md-tab-group>
+<button md-raised-button (click)="onReset()">Reset</button>
+<button md-raised-button (click)="diagnostic()">Diagnostic</button>

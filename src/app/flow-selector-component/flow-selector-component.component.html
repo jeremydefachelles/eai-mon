@@ -1,0 +1,36 @@
+<!-- PLATFORM SELECTION -->
+<div *ngIf="selectedPlatform == null" class="selectorList">
+  <md-card class="flow-card-wide" *ngFor="let pf of platforms">
+    <md-card-header>
+      <div md-card-avatar><i class="material-icons  mdl-list__item-avatar">explore</i></div>
+      <md-card-title>{{pf.name}}</md-card-title>
+    </md-card-header>
+    <md-card-actions>
+      <button md-raised-button (click)="onPlatformSelected(pf)">Details</button>
+    </md-card-actions>
+  </md-card>
+</div>
+<!-- DOMAIN SELECTION -->
+<div *ngIf="selectedPlatform != null && selectedDomain == null" class="selectorList">
+  <md-card class="flow-card-wide" *ngFor="let d of selectedPlatform.domain">
+    <i class="material-icons  mdl-list__item-avatar">settings</i>
+    <a (click)="onDomainSelected(d)" href="#">{{d.name}}</a>
+  </md-card>
+</div>
+<!-- PE SELECTION -->
+<div *ngIf="selectedDomain != null && selectedPE == null" class="selectorList">
+  <md-card class="flow-card-wide" *ngFor="let p of selectedDomain.pe">
+    <i class="material-icons  mdl-list__item-avatar">settings</i>
+    <a (click)="onPeSelected(p)" href="#">{{p.name}}</a>
+    <md-card-content>{{p.description}}</md-card-content>
+  </md-card>
+</div>
+<!-- MD SELECTION -->
+<div *ngIf="selectedPE != null" class="selectorList">
+  <md-card class="flow-card-wide" *ngFor="let f of selectedPE.flux">
+    <i class="material-icons  mdl-list__item-avatar">settings</i>
+    <a (click)="onFlowSelected(f)" href="#">{{f.name}}</a>
+    <md-card-content>{{f.description}}
+    </md-card-content>
+  </md-card>
+</div>

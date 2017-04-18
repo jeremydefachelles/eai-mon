@@ -1,3 +1,42 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <button class="app-icon-button" (click)="sidenav.toggle()">
+      <i class="material-icons app-toolbar-menu">menu</i>
+    </button> Web EAI Monitoring
+  <span class="app-toolbar-filler"></span>
+</md-toolbar>
+<div class="app-content">
+  <app-breadcrumb-component [platformName]="platformName" [domainName]="domainName" [peName]="peName" [flowName]="flowName"
+    (onBreadcrumbEvent)="onBreadcrumbEvent($event)">
+  </app-breadcrumb-component>
+  <md-card>
+    <button md-raised-button color="accent" (click)="onParameters()">
+  Parameters
+</button>
+    <button md-raised-button color="primary" (click)="onSearchInstances()">
+  Search
+</button>
+    <button md-raised-button color="accent">
+  View Errors
+</button>
+  </md-card>
+  <md-card *ngIf="isSearchPanelDisplayed == true">
+    <app-search-component (onSearchParameterEvent)="onSearchParameterEvent($event)"></app-search-component>
+  </md-card>
+  <md-card *ngIf="isFlowSelectorPanelDisplayed">
+    <md-card-title>
+      <h3>Flow selector</h3>
+    </md-card-title>
+    <md-card-content>
+      <app-flow-selector-component [breadcrumbEvent]="breadcrumbEvent" (onPlatformName)="onPlatformName($event)" (onDomainName)="onDomainName($event)"
+        (onPeName)="onPeName($event)" (onFlowName)="onFlowName($event)">
+      </app-flow-selector-component>
+    </md-card-content>
+  </md-card>
+  <md-card *ngIf="isProcessesPanelDisplayed">
+    <app-processes-component [processRequestEvent]="processRequestEvent">
+    </app-processes-component>
+  </md-card>
+</div>
+<span class="app-action" [class.m2app-dark]="isDarkTheme">
+  <button md-fab><md-icon>check circle</md-icon></button>
+</span>

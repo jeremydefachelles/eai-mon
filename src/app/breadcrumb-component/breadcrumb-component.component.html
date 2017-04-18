@@ -1,0 +1,11 @@
+<ol class="breadcrumb">
+	<li><a (click)="onReloadBreadcrumb()"><i class="material-icons">cached</i></a></li>
+	<li *ngIf="selector.platformName"><a
+		(click)="showDomain(selector.platformName)">{{selector.platformName}}</a></li>
+	<li *ngIf="selector.domainName"
+			(click)="showPEs(selector.domainName)"><a>{{selector.domainName}}</a></li>
+	<li *ngIf="selector.peName" (click)="showFlows(selector.peName)"><a>{{selector.peName}}</a></li>
+	<li *ngIf="selector.flowName"><a>{{selector.flowName}}</a></li>
+</ol>
+
+

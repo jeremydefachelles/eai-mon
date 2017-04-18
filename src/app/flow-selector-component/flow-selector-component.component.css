@@ -1,0 +1,14 @@
+.selectorList{
+    
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+
+.flow-card-wide{
+    min-width: 120px;
+    background-color: #f3f3f3;
+     margin: 4px;
+
+}
+
